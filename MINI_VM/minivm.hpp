@@ -39,7 +39,7 @@ namespace mini {
 
 	/*
 	*	REGISTERS:
-	*		A    (HA, A, DA, EAX) { HalfA, A, DoubleA, FullA }
+	*		A    (AH, A, AX, EAX) { HalfA, A, DoubleA, FullA }
 	*		B
 	*		C
 	*		D
