@@ -50,9 +50,9 @@ namespace mini {
 	*		R2
 	*		R3
 	*		R4
-	*		ERP  (Program Error)
-	*		IP
+	*		ERR  (Program Error)
 	*		JLP  (jump link pointer)
+	*		IP
 	*		SH   (Stack Head)
 	*		SB   (Stack Base)
 	* 

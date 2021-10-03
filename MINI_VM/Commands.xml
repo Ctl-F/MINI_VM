@@ -2,58 +2,90 @@
 <asmdef>
 	<operands>
 		<group name="GPR">
-			<operand name="AH"  expr="[Aa][Hh]"  size="8" dtype="int" bytecode="0"></operand>
-			<operand name="BH"  expr="[Bb][Hh]"  size="8" dtype="int" bytecode="1"></operand>
-			<operand name="CH"  expr="[Cc][Hh]"  size="8" dtype="int" bytecode="2"></operand>
-			<operand name="DH"  expr="[Dd][Hh]"  size="8" dtype="int" bytecode="3"></operand>
-			<operand name="EH"  expr="[Ee][Hh]"  size="8" dtype="int" bytecode="4"></operand>
-			<operand name="FH"  expr="[Ff][Hh]"  size="8" dtype="int" bytecode="5"></operand>
-			<operand name="RH0" expr="[Rr][Hh]0" size="8" dtype="int" bytecode="6"></operand>
-			<operand name="RH1" expr="[Rr][Hh]1" size="8" dtype="int" bytecode="7"></operand>
-			<operand name="RH2" expr="[Rr][Hh]2" size="8" dtype="int" bytecode="8"></operand>
-			<operand name="RH3" expr="[Rr][Hh]3" size="8" dtype="int" bytecode="9"></operand>
-			<operand name="RH4" expr="[Rr][Hh]4" size="8" dtype="int" bytecode="A"></operand>
+			<operand name="AH"  expr="[Aa][Hh]"  size="1" type="int" bytecode="0"></operand>
+			<operand name="BH"  expr="[Bb][Hh]"  size="1" type="int" bytecode="1"></operand>
+			<operand name="CH"  expr="[Cc][Hh]"  size="1" type="int" bytecode="2"></operand>
+			<operand name="DH"  expr="[Dd][Hh]"  size="1" type="int" bytecode="3"></operand>
+			<operand name="EH"  expr="[Ee][Hh]"  size="1" type="int" bytecode="4"></operand>
+			<operand name="FH"  expr="[Ff][Hh]"  size="1" type="int" bytecode="5"></operand>
+			<operand name="RH0" expr="[Rr][Hh]0" size="1" type="int" bytecode="6"></operand>
+			<operand name="RH1" expr="[Rr][Hh]1" size="1" type="int" bytecode="7"></operand>
+			<operand name="RH2" expr="[Rr][Hh]2" size="1" type="int" bytecode="8"></operand>
+			<operand name="RH3" expr="[Rr][Hh]3" size="1" type="int" bytecode="9"></operand>
+			<operand name="RH4" expr="[Rr][Hh]4" size="1" type="int" bytecode="A"></operand>
 
-			<operand name="A"  expr="[Aa]"  size="16" dtype="int" bytecode="#AH" ></operand>
-			<operand name="B"  expr="[Bb]"  size="16" dtype="int" bytecode="#BH" ></operand>
-			<operand name="C"  expr="[Cc]"  size="16" dtype="int" bytecode="#CH" ></operand>
-			<operand name="D"  expr="[Dd]"  size="16" dtype="int" bytecode="#DH" ></operand>
-			<operand name="E"  expr="[Ee]"  size="16" dtype="int" bytecode="#EH" ></operand>
-			<operand name="F"  expr="[Ff]"  size="16" dtype="int" bytecode="#FH" ></operand>
-			<operand name="R0" expr="[Rr]0" size="16" dtype="int" bytecode="#RH0"></operand>
-			<operand name="R1" expr="[Rr]1" size="16" dtype="int" bytecode="#RH1"></operand>
-			<operand name="R2" expr="[Rr]2" size="16" dtype="int" bytecode="#RH2"></operand>
-			<operand name="R3" expr="[Rr]3" size="16" dtype="int" bytecode="#RH3"></operand>
-			<operand name="R4" expr="[Rr]4" size="16" dtype="int" bytecode="#RH4"></operand>
+			<operand name="A"  expr="[Aa]"  size="2" type="int" bytecode="#AH" ></operand>
+			<operand name="B"  expr="[Bb]"  size="2" type="int" bytecode="#BH" ></operand>
+			<operand name="C"  expr="[Cc]"  size="2" type="int" bytecode="#CH" ></operand>
+			<operand name="D"  expr="[Dd]"  size="2" type="int" bytecode="#DH" ></operand>
+			<operand name="E"  expr="[Ee]"  size="2" type="int" bytecode="#EH" ></operand>
+			<operand name="F"  expr="[Ff]"  size="2" type="int" bytecode="#FH" ></operand>
+			<operand name="R0" expr="[Rr]0" size="2" type="int" bytecode="#RH0"></operand>
+			<operand name="R1" expr="[Rr]1" size="2" type="int" bytecode="#RH1"></operand>
+			<operand name="R2" expr="[Rr]2" size="2" type="int" bytecode="#RH2"></operand>
+			<operand name="R3" expr="[Rr]3" size="2" type="int" bytecode="#RH3"></operand>
+			<operand name="R4" expr="[Rr]4" size="2" type="int" bytecode="#RH4"></operand>
 
-			<operand name="AX"  expr="[Aa][Xx]"  size="32" dtype="int" bytecode="#AH" ></operand>
-			<operand name="BX"  expr="[Bb][Xx]"  size="32" dtype="int" bytecode="#BH" ></operand>
-			<operand name="CX"  expr="[Cc][Xx]"  size="32" dtype="int" bytecode="#CH" ></operand>
-			<operand name="DX"  expr="[Dd][Xx]"  size="32" dtype="int" bytecode="#DH" ></operand>
-			<operand name="EX"  expr="[Ee][Xx]"  size="32" dtype="int" bytecode="#EH" ></operand>
-			<operand name="FX"  expr="[Ff][Xx]"  size="32" dtype="int" bytecode="#FH" ></operand>
-			<operand name="RX0" expr="[Rr][Xx]0" size="32" dtype="int" bytecode="#RH0"></operand>
-			<operand name="RX1" expr="[Rr][Xx]1" size="32" dtype="int" bytecode="#RH1"></operand>
-			<operand name="RX2" expr="[Rr][Xx]2" size="32" dtype="int" bytecode="#RH2"></operand>
-			<operand name="RX3" expr="[Rr][Xx]3" size="32" dtype="int" bytecode="#RH3"></operand>
-			<operand name="RX4" expr="[Rr][Xx]4" size="32" dtype="int" bytecode="#RH4"></operand>
+			<operand name="AX"  expr="[Aa][Xx]"  size="4" type="int" bytecode="#AH" ></operand>
+			<operand name="BX"  expr="[Bb][Xx]"  size="4" type="int" bytecode="#BH" ></operand>
+			<operand name="CX"  expr="[Cc][Xx]"  size="4" type="int" bytecode="#CH" ></operand>
+			<operand name="DX"  expr="[Dd][Xx]"  size="4" type="int" bytecode="#DH" ></operand>
+			<operand name="EX"  expr="[Ee][Xx]"  size="4" type="int" bytecode="#EH" ></operand>
+			<operand name="FX"  expr="[Ff][Xx]"  size="4" type="int" bytecode="#FH" ></operand>
+			<operand name="RX0" expr="[Rr][Xx]0" size="4" type="int" bytecode="#RH0"></operand>
+			<operand name="RX1" expr="[Rr][Xx]1" size="4" type="int" bytecode="#RH1"></operand>
+			<operand name="RX2" expr="[Rr][Xx]2" size="4" type="int" bytecode="#RH2"></operand>
+			<operand name="RX3" expr="[Rr][Xx]3" size="4" type="int" bytecode="#RH3"></operand>
+			<operand name="RX4" expr="[Rr][Xx]4" size="4" type="int" bytecode="#RH4"></operand>
 
-			<operand name="EAH"  expr="[Ee][Aa][Hh]"  size="64" dtype="int" bytecode="#AH" ></operand>
-			<operand name="EBH"  expr="[Ee][Bb][Hh]"  size="64" dtype="int" bytecode="#BH" ></operand>
-			<operand name="ECH"  expr="[Ee][Cc][Hh]"  size="64" dtype="int" bytecode="#CH" ></operand>
-			<operand name="EDH"  expr="[Ee][Dd][Hh]"  size="64" dtype="int" bytecode="#DH" ></operand>
-			<operand name="EEH"  expr="[Ee][Ee][Hh]"  size="64" dtype="int" bytecode="#EH" ></operand>
-			<operand name="EFH"  expr="[Ee][Ff][Hh]"  size="64" dtype="int" bytecode="#FH" ></operand>
-			<operand name="ERH0" expr="[Ee][Rr][Hh]0" size="64" dtype="int" bytecode="#RH0"></operand>
-			<operand name="ERH1" expr="[Ee][Rr][Hh]1" size="64" dtype="int" bytecode="#RH1"></operand>
-			<operand name="ERH2" expr="[Ee][Rr][Hh]2" size="64" dtype="int" bytecode="#RH2"></operand>
-			<operand name="ERH3" expr="[Ee][Rr][Hh]3" size="64" dtype="int" bytecode="#RH3"></operand>
-			<operand name="ERH4" expr="[Ee][Rr][Hh]4" size="64" dtype="int" bytecode="#RH4"></operand>
+			<operand name="EAH"  expr="[Ee][Aa][Hh]"  size="8" type="int" bytecode="#AH" ></operand>
+			<operand name="EBH"  expr="[Ee][Bb][Hh]"  size="8" type="int" bytecode="#BH" ></operand>
+			<operand name="ECH"  expr="[Ee][Cc][Hh]"  size="8" type="int" bytecode="#CH" ></operand>
+			<operand name="EDH"  expr="[Ee][Dd][Hh]"  size="8" type="int" bytecode="#DH" ></operand>
+			<operand name="EEH"  expr="[Ee][Ee][Hh]"  size="8" type="int" bytecode="#EH" ></operand>
+			<operand name="EFH"  expr="[Ee][Ff][Hh]"  size="8" type="int" bytecode="#FH" ></operand>
+			<operand name="ERH0" expr="[Ee][Rr][Hh]0" size="8" type="int" bytecode="#RH0"></operand>
+			<operand name="ERH1" expr="[Ee][Rr][Hh]1" size="8" type="int" bytecode="#RH1"></operand>
+			<operand name="ERH2" expr="[Ee][Rr][Hh]2" size="8" type="int" bytecode="#RH2"></operand>
+			<operand name="ERH3" expr="[Ee][Rr][Hh]3" size="8" type="int" bytecode="#RH3"></operand>
+			<operand name="ERH4" expr="[Ee][Rr][Hh]4" size="8" type="int" bytecode="#RH4"></operand>
+
+			<operand name="ERR" expr="[Ee][Rr]{2}" size="4" type="int" bytecode="B"></operand>
+			<operand name="JLP" expr="[Jj][Ll][Pp]" size="8" type="int" bytecode="C"></operand>
+		</group>
+		<group name="SPR">
+			<operand name="IP" expr="[Ii][Pp]" size="8" type="int" bytecode="D"></operand>
+			<operand name="SH" expr="[Ss][Hh]" size="8" type="int" bytecode="E"></operand>
+			<operand name="SB" expr="[Ss][Bb]" size="8" type="int" bytecode="F"></operand>
+		</group>
+		<group name="FPR">
+			<operand name="F0" expr="[Ff]0" size="8" type="float" bytecode="0"></operand>
+			<operand name="F1" expr="[Ff]1" size="8" type="float" bytecode="1"></operand>
+			<operand name="F2" expr="[Ff]2" size="8" type="float" bytecode="2"></operand>
+			<operand name="F3" expr="[Ff]3" size="8" type="float" bytecode="3"></operand>
+			<operand name="F4" expr="[Ff]4" size="8" type="float" bytecode="4"></operand>
+			<operand name="F5" expr="[Ff]5" size="8" type="float" bytecode="5"></operand>
+			<operand name="F6" expr="[Ff]6" size="8" type="float" bytecode="6"></operand>
+			<operand name="F7" expr="[Ff]7" size="8" type="float" bytecode="7"></operand>
+		</group>
+		<group name="CONST">
+			<!--* means to use the size/data of the actual token-->
+			<!--@ means to use the current address in the bytecode [exclusively for labels but can be used
+				for other constructs as well potentially-->
+			<operand name="FLOAT" expr="-?((\d+\.)|(\.\d+))\d*" size="8" type="float" bytecode="*"></operand>
+			<operand name="INT" expr="-?\d+" size="*" type="int" bytecode="*"></operand>
 			
 		</group>
-	</operands>
-	<commands  bytes="16">
-		<command name="nop" args="0" expr="[Nn][Oo][Pp]" bytecode="ordered"></command>
+	</operands
+	>
+	<commands  size="2">
+		<!--The text between <command></command> is a psudo c++ code, ano operands will get
+		stored as [%0, %1, %2, ...] The generator will take all these operands and generate
+		a .cpp file with a function implementing all of these operands (so we don't have to
+		copy/paste and duplicate a bunch of code for 100+ similar operands). The command is generated
+		as a member of the MiniVM class and has access to its data members and functions
+		-->
+		<command name="nop" args="0" expr="[Nn][Oo][Pp]" bytecode="auto">{ ; }</command>
 		<!--Data Movement-->
 
 
