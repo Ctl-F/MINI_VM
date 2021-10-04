@@ -74,7 +74,7 @@
 				for other constructs as well potentially-->
 			<operand name="FLOAT" expr="-?((\d+\.)|(\.\d+))\d*" size="8" type="float" bytecode="*"></operand>
 			<operand name="INT" expr="-?\d+" size="*" type="int" bytecode="*"></operand>
-			
+			<operand name="LABEL" expr="[A-Za-z_][A-Za-z0-9_]*" size="8" type="int" bytecode="@"></operand>
 		</group>
 	</operands
 	>
@@ -82,12 +82,36 @@
 		<!--The text between <command></command> is a psudo c++ code, ano operands will get
 		stored as [%0, %1, %2, ...] The generator will take all these operands and generate
 		a .cpp file with a function implementing all of these operands (so we don't have to
-		copy/paste and duplicate a bunch of code for 100+ similar operands). The command is generated
-		as a member of the MiniVM class and has access to its data members and functions
+		copy/paste and duplicate a bunch of code for 100+ similar operands). The command is
+		generated as a member of the MiniVM class and has access to its data members and
+		functions
+		
+		expr:
+			{..} ==> operand name lookup
+			`..` ==> group name lookup
+			`..:typefilter|sizefilter` ==> accept anything from this group with the given type
+			
+		sizefilter:
+			2 => 2 bytes
 		-->
 		<command name="nop" args="0" expr="[Nn][Oo][Pp]" bytecode="auto">{ ; }</command>
 		<!--Data Movement-->
-
+		<command name="mov8_const" args="2" expr="[Mm][Oo][Vv]\s+`GPR:int|1`\s*,\s*`CONST:int|1`" bytecode="auto">
+			m_reg[%0].hx = %1;
+		</command>
+		<command name="mov8_reg" args="2" expr="[Mm][Oo][Vv]\s+`GPR:int|1`\s*,\s*`GPR:int|1`" bytecode="auto">
+			m_reg[%0].hx = m_reg[%1].hx;
+		</command>
+		<command name="mov16_const" args="2" expr="[Mm][Oo][Vv]\s+`GPR:int|2`\s*,\s*`CONST:int|2`" bytecode="auto">
+			m_reg[%0].x = %1;
+		</command>
+		<command name="mov16_reg" args="2" expr="[Mm][Oo][Vv]\s+`GPR:int|2`\s*,\s*`GPR:int|2`" bytecode="auto">
+			m_reg[%0].x = m_reg[%1].x;
+		</command>
+		<command name="mov16_reg8" args="2" expr="[Mm][Oo][Vv]\s+`GPR:int|2`\s*,\s*`GPR:int|1`" bytecode="auto">
+			m_reg[%0].x = m_reg[%1].hx;
+		</command>
+		
 
 		<!--Math Operatiors-->
 		<!--Binary Operators-->
